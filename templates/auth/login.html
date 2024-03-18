@@ -1,0 +1,33 @@
+{% extends 'base.html' %}{% block title %}
+Login
+{% endblock title %}
+
+{% block content %}
+
+<div class="container w-50">
+    <h1 class="my-5 text-center">Login!</h1>
+    <hr width="50%" style="margin: 20px auto;">
+    <form method="POST" action="">
+        <div class="mb-3">
+            <div class="col-auto">
+                <label for="email" class="form-label">Email address</label>
+            </div>
+            <div class="col-auto">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="col-auto">
+                <label for="password" class="form-label">Password</label>
+            </div>
+            <div class="col-auto password-container">
+                <input type="password" class="form-control" name="password" id="passwordField">
+                <i class="bi bi-eye" id="togglePassword"></i>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-dark">Login</button>
+    </form>
+</div>
+
+{% endblock content %}
