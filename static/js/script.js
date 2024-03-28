@@ -21,7 +21,7 @@ togglePassword.addEventListener('click', function () {
 toggleConfirmPassword.addEventListener('click', function () {
     togglePasswordVisibility(confirmPasswordField, this);
 });
-// /////////////////////////////////
+
 
 function togglePasswordVisibility(field, icon) {
     const type = field.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -45,58 +45,16 @@ function toggleUploadForm() {
 }
 
 
-// $(document).ready(function () {
-//     $('#delete-pic').click(function () {
-//         // Perform delete action
-//         $.ajax({
-//             url: '/profile/delete_profile_pic', // Update with your delete endpoint
-//             type: 'POST',
-//             success: function (response) {
-//                 // Reload the page
-//                 window.location.reload();
-//             },
-//             error: function (xhr, status, error) {
-//                 // Handle error, such as displaying an error message
-//                 console.error('Error deleting profile picture.');
-//             }
-//         });
-//     });
-// });
-
-// $(document).ready(function () {
-//     $(document).on('click', '#delete-pic', function () {
-//         console.log('Delete button clicked'); // Check if this message appears in the console
-//         // Perform delete action
-//         $.ajax({
-//             url: '/profile/delete_profile_pic', // Update with your delete endpoint
-//             type: 'POST',
-//             success: function (response) {
-//                 console.log('Profile picture deleted successfully'); // Log success message
-//                 // Reload the page
-//                 window.location.reload();
-//             },
-//             error: function (xhr, status, error) {
-//                 // Handle error, such as displaying an error message
-//                 console.error('Error deleting profile picture:', error);
-//             }
-//         });
-//     });
-// });
-
 
 
 function deleteProfilePic() {
-    // console.log('Delete button clicked');
-
     $.ajax({
         url: '/profile/delete_profile_pic',
         type: 'POST',
         success: function (response) {
-            // console.log('Profile picture deleted successfully');
             window.location.reload();
         },
         error: function (xhr, status, error) {
-            // console.error('Error deleting profile picture:', error);
         }
     });
 }
