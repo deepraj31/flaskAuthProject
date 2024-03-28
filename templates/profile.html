@@ -37,7 +37,7 @@
 
                     <button type="submit" class="btn btn-dark">Upload</button>
                     <button type="button" class="btn btn-danger delete-btn" id="delete-pic" {% if
-                        profile_pic=='default.jpg' %}disabled{% endif %}>Delete</button>
+                        profile_pic=='default.jpg' %}disabled{% endif %} onclick="deleteProfilePic()">Delete</button>
                 </div>
             </div>
         </form>
@@ -58,8 +58,23 @@
                 </div>
             </div>
             <div class="col-8 h-100">
-                <div class="card h-100 shadow ">
-                    One of three columns
+                <div class="card h-100 shadow px-5 ">
+
+
+                    <div class="name mt-5 d-flex">
+                        <span style="margin-right: 2em;"><strong>Name: </strong></span>{{ current_user.fname }} {{
+                        current_user.lname }}
+                    </div>
+                    <div class="name mt-2 d-flex">
+                        <span style="margin-right: 2em;"><strong>email: </strong></span>{{ current_user.email }}
+                    </div>
+                    <div class="name my-2 d-flex">
+                        <span style="margin-right: 2em;"><strong>phone: </strong></span>+91 {{ current_user.phone }}
+                    </div>
+                    <div class="name mb-5 d-flex">
+                        <span style="margin-right: 2em;"><strong>Joined: </strong></span>{{
+                        current_user.created_at.strftime('%d-%m-%Y') }}
+                    </div>
                 </div>
             </div>
         </div>

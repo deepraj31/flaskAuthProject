@@ -1,7 +1,12 @@
+from datetime import datetime, date
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 
+
+
 db = SQLAlchemy()
+
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -12,5 +17,8 @@ class User(db.Model, UserMixin):
     profile_pic = db.Column(db.String(150), default='default.jpg')
     address = db.Column(db.String(250))
     password = db.Column(db.String(150), nullable=False)
+    created_at = db.Column(db.Date, default=datetime.today())  
+
+
 
 
