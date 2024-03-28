@@ -63,9 +63,12 @@ user-authentication-system/
 ## Installation
 
   
-1. Create virtual environment (Optional):
+1. Create virtual environment and activate (Optional):
    ```bash
-   python -m venv venv 
+   python -m venv venv  #For Creating environment
+   ```
+   ```bash
+   venv/Scripts/Activate  #For Activating environment
    ```
 
 
