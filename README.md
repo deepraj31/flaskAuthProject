@@ -64,11 +64,13 @@ user-authentication-system/
 
   
 1. Create virtual environment and activate (Optional):
+- For Creating environment
    ```bash
-   python -m venv venv  #For Creating environment
+   python -m venv venv  
    ```
+- For Activating environment
    ```bash
-   venv/Scripts/Activate  #For Activating environment
+   venv/Scripts/Activate  
    ```
 
 
