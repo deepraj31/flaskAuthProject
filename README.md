@@ -71,7 +71,7 @@ user-authentication-system/
 
 2. Clone the repository:
    ```bash
-   git clone https://github.com/deepraj31/Pyflask.git
+   git clone https://github.com/deepraj31/flaskAuthProject.git
    ```
 
 
